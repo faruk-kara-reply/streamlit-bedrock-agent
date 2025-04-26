@@ -14,12 +14,12 @@ A generic Streamlit UI for testing generative AI agents built using Agents for A
    ```
    pip install -r requirements.txt
    ```
+
 2. Configure your AWS CLI with credentials that have permissions to invoke the Bedrock agent:
    ```
    aws configure
    ```
-   
-3. Set the following environment variables either directly or using a `.env` file (use `.env.template` as a starting point):
+3. Set the following environment variables either directly in `services/bedrock_agent_runtime.py` or using a `.env` file (use `.env.template` as a starting point):
    - `BEDROCK_AGENT_ID` - The ID of the agent.
    - `BEDROCK_AGENT_ALIAS_ID` - The ID of the agent alias. The default `TSTALIASID` will be used if it is not set.
    - The [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) that provides the credentials to your account. The principal must have the necessary permissions to invoke the Bedrock agent.
